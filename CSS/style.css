@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --font-titulo: 'Kdam Thmor Pro', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --color01: #991CEB;
+    --color02: #00B392;
+    --color03: #002857;
+    --color04: #1A26EB;
+    --color05: #3DB3EB;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--color02);
+    height: 370px;
+    display: flex;
+    align-items: center;
+}
+
+header > img {
+    max-width: 330px;
+    margin-left: 20%;
+    animation: entrada .5s linear;
+}
+
+nav {
+    background-color: var(--color02);
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px var(--color03)
+}
+
+nav a {
+    text-decoration: none orange 5px;
+}
+
+nav a:hover {
+    text-decoration: underline orange 5px;
+}
+
+.menu_open {
+    display: none;
+}
+
+.span {
+    display: none;
+}
+
+a {
+    margin: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.content_header {
+    margin-left: 100px;
+    max-width: 430px;
+    animation: entrada .5s linear;
+}
+
+.content_header > h1 {
+    font-size: 50px;
+    color: white;
+    font-family: var(--font-titulo);
+}
+
+.content_header > p {
+    margin-top: 10px;
+    color: white;
+    font-family: var(--font-poppins);
+}
+
+.content_header > input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: var(--color01);
+    color: white;
+    width: 300px;
+}
+
+.content_header > input:hover {
+    background-color: white;
+    color: var(--color01);
+    transition: .5s;
+}
+
+article {
+    background-color: var(--color02);
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    margin-bottom: 120px;
+}
+
+.card {
+    width: 140px;
+    height: 150px;
+    background-color: var(--color02);
+    box-shadow: 0px 0px 10px black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    animation: entrada .5s linear;
+}
+
+.cardDesktop {
+    width: 140px;
+    height: 150px;
+    background-color: var(--color02);
+    box-shadow: 0px 0px 10px black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    animation: entrada .5s linear;
+}
+
+.card P {
+    color: white;
+    font-family: var(--font-poppins);
+}
+
+.cardDesktop  P {
+    color: white;
+    font-family: var(--font-poppins);
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main h1 {
+    margin: 15px;
+    font-family: var(--font-titulo);
+}
+
+main p {
+    font-family: var(--font-poppins);
+    text-align: justify;
+    font-size: 20px;
+}
+
+.desenho {
+    max-width: 400px;
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: 3px 3px 1px black;
+}
+
+.card_profile {
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: var(--color02);
+    color: white;
+    font-family: var(--font-poppins);
+
+}
+
+@keyframes entrada {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(30px);
+        opacity: 1;
+    }
+}
+
+@keyframes entrada_menu {
+    0% {
+        right: -800px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes saida_menu {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -800px;
+    }
+}
+
+@media (max-width: 700px) {
+    .content_header {
+        margin-left: 5px;
+    }
+
+    .cardDesktop {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .span {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: white;
+        background-color: #981ceb64;
+        border-radius: 20px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .menu_open {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        position: fixed;
+        background-color: var(--color03);
+        height: 100vh;
+        width: 80%;
+        right: 0px;
+    }
+
+    .fechar {
+        color: white;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    header > img {
+        display: none;
+    }
+    
+    main {
+        max-width: 400px;
+    }
+}
+
+.img_profile {
+     max-width: 85px;
+     margin-left: 40px;
+     border: 2px inset #000000 ;
+     
+ }
+
+ h2{
+    text-align: center;
+    margin-top: 15px;
+    font-variant: small-caps;
+    color: var(--color02);
+    font-family: var(--font-titulo);
+
+ }
+
+
